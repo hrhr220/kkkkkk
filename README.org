@@ -1,0 +1,64 @@
+* Mafia Bot
+
+This project is a work-in-progress Discord bot for mafia games.
+
+* File structure
+
+All the code is located in the =src= folder. =src/index.ts= is the file that actually uses the Mafia Bot. In =src/mafia-bot= is the Mafia Bot library.
+
+** Note on =index.ts= files
+
+**Note**: Every =index.ts=, except for =src/index.ts= simply imports classes from its own directory and exports them together. This allows us to import the contents of an entire folder with one import statement, as done in =src/index.ts=, for example:
+
+#+begin_src typescript
+
+  import { Game } from "./mafia-bot";
+
+#+end_src
+
+This requires the flag =--experimental-specifier-resolution=node= to be set to work properly with Node, which is used in the NPM start script (see =package.json=).
+
+** Contents of =src/mafia-bot=
+
+The contents of =src/mafia-bot= is described below.
+
+Files inside =src/mafia-bot=:
+- =command.ts=: This file contains code for the bot commands.
+- =channels.ts=: Here are described the names of all the relevant channels inside the Discord server where the mafia game will take place.
+- =game.ts=: Game is the main class which is used for creating mafia games.
+
+The following files are currently unused and need to be sorted into a fitting folder: =ability.ts=, =action.ts=, =area.ts=, =balance.ts=, =faction.ts=, =player-living-state.ts=, =player.ts=, =residence.ts=, =rolecard.ts=, =targets.ts=.
+
+Subfolders of =src/mafia-bot=: 
+
+*** =core=
+
+This folder contains code that is not specific to the mafia game I'm creating this bot for: it's the core that can be reused.
+
+Subfolders:
+- =bot=: The Bot class is in charge of directly interacts with Discord.
+- =event=: This folder contains the code for all the game-related events and their listeners. An example event could be a Discord message being sent, and a listener would be a command being run.
+- =interaction=: An interaction is where a user can interact with the bot through Discord, e.g. by reacting, clicking a button or selecting a menu item.
+- =phase=: A phase is a period of time where certain event listeners are active. Some example phases are day and night.
+
+*** =interactions=
+
+This folder contains interactions used by the game (interactions are defined in =core/interaction=).
+
+Files inside =interactions=:
+- =sign-up.ts=: This defines the interaction for signing up to the mafia game by reacting to a message with a checkmark emoji.
+- =voting.ts=: This defines the interaction for voting for something (for example which player to lynch), using a Discord menu select.
+
+*** =listeners=
+
+This folder contains event listeners used by the game (listeners are defined in =core/listener=).
+
+Files inside =listeners=:
+- =message-create=: This class is a listener for the Discord messageCreate event which runs a command if the message start with a certain prefix (by default ~mb!~ for non-admin commands and ~mba!~ for admin commands).
+
+*** =phases=
+
+This folder contains phases used by the game (phases are defined in =core/phase=).
+
+Files inside =phases=:
+- =before=: The BeforePhase class defines the phase before the game takes place where users sign up. It holds code that should be run when getting the server ready for users to join and sign up.

@@ -1,0 +1,83 @@
+* Tasks
+
+** DONE Begin Classes
+CLOSED: [2022-03-19 Sat 08:48]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-03-19 Sat 08:48]
+:END:
+*** DONE Balance Class
+CLOSED: [2022-02-01 Tue 14:29]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-02-01 Tue 14:29]
+:END:
+*** DONE MafiaBot Class
+CLOSED: [2022-02-01 Tue 20:09]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-02-01 Tue 20:09]
+:END:
+*** DONE Action Class
+CLOSED: [2022-02-01 Tue 20:09]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-02-01 Tue 20:09]
+:END:
+*** DONE Rolecard Class
+CLOSED: [2022-02-01 Tue 20:23]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-02-01 Tue 20:23]
+:END:
+*** DONE Residence Class
+CLOSED: [2022-02-01 Tue 20:23]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-02-01 Tue 20:23]
+:END:
+*** DONE Faction Class
+CLOSED: [2022-02-03 Thu 18:30]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-02-03 Thu 18:30]
+:END:
+*** DONE Phase Class
+CLOSED: [2022-02-03 Thu 20:31]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-02-03 Thu 20:31]
+:END:
+*** DONE Interaction Classes
+CLOSED: [2022-03-19 Sat 08:48]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-03-19 Sat 08:48]
+:END:
+**** TODO UserInteraction Class
+**** TODO Voting Class
+**** TODO SignUp Class
+**** TODO AbilitySelection Class
+**** TODO LocationSelection Class
+*** DONE Event Class
+CLOSED: [2022-02-03 Thu 20:31]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-02-03 Thu 20:31]
+:END:
+
+** NEXT Create phases
+
+*** NEXT Before
+
+*** TODO Playing
+
+*** TODO Day
+
+*** TODO Night
+
+*** TODO Candidate
+
+*** TODO Betting
+
+*** TODO Game
+
+** TODO Create interactions
+
+*** TODO SignUp
+
+*** TODO MenuSelection
+
+*** TODO Voting
+
+*** TODO AbilitySelection
